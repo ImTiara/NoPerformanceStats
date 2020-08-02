@@ -12,8 +12,8 @@ namespace NoPerformanceStats
         public const string Name = "NoPerformanceStats";
         public const string Author = "ImTiara";
         public const string Company = null;
-        public const string Version = "1.0.0";
-        public const string DownloadLink = null;
+        public const string Version = "1.0.1";
+        public const string DownloadLink = "https://github.com/ImTiara/NoPerformanceStats/releases";
     }
 
     public class NoPerformanceStats : MelonMod
@@ -25,7 +25,7 @@ namespace NoPerformanceStats
         public override void OnApplicationStart()
         {
             ModPrefs.RegisterCategory("NoPerformanceStats", "No Performance Stats");
-            ModPrefs.RegisterPrefBool("NoPerformanceStats", "Disable Performance Stats", true, "");
+            ModPrefs.RegisterPrefBool("NoPerformanceStats", "DisablePerformanceStats", true, "Disable Performance Stats");
 
             LoadModPrefs();
 
@@ -48,7 +48,7 @@ namespace NoPerformanceStats
         {
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
             {
-                ModPrefs.SetBool("NoPerformanceStats", "Disable Performance Stats", allowPerformanceScanner);
+                ModPrefs.SetBool("NoPerformanceStats", "DisablePerformanceStats", allowPerformanceScanner);
                 LoadModPrefs();
                 MelonModLogger.Log("Avatar Performance Stats is now " + (allowPerformanceScanner ? "ENABLED" : "DISABLED"));
             }
@@ -56,7 +56,7 @@ namespace NoPerformanceStats
 
         public override void OnModSettingsApplied() => LoadModPrefs();
 
-        private void LoadModPrefs() => allowPerformanceScanner = !ModPrefs.GetBool("NoPerformanceStats", "Disable Performance Stats");
+        private void LoadModPrefs() => allowPerformanceScanner = !ModPrefs.GetBool("NoPerformanceStats", "DisablePerformanceStats");
 
         private static bool CalculatePerformance() => allowPerformanceScanner;
 

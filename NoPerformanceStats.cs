@@ -3,6 +3,7 @@ using MelonLoader;
 using System;
 using System.Reflection;
 using UnityEngine;
+using VRCSDK2.Validation.Performance;
 
 namespace NoPerformanceStats
 {
@@ -33,7 +34,7 @@ namespace NoPerformanceStats
 
             try
             {
-                MethodInfo[] methods = typeof(ObjectPublicAbstractSealedInObInObObObObUnique).GetMethods(BindingFlags.Public | BindingFlags.Static);
+                MethodInfo[] methods = typeof(AvatarPerformance).GetMethods(BindingFlags.Public | BindingFlags.Static);
                 for (int i = 0; i < methods.Length; i++)
                     if (methods[i].Name == "Method_Public_Static_IEnumerator_String_GameObject_AvatarPerformanceStats_0" || methods[i].Name == "Method_Public_Static_IEnumerator_GameObject_AvatarPerformanceStats_EnumPublicSealedvaNoExGoMePoVe7vUnique_MulticastDelegateNPublicSealedVoUnique_0" || methods[i].Name == "Method_Public_Static_Void_String_GameObject_AvatarPerformanceStats_0")
                         harmonyInstance.Patch(methods[i], new HarmonyMethod(typeof(NoPerformanceStats).GetMethod("CalculatePerformance", BindingFlags.Static | BindingFlags.NonPublic)), null, null);

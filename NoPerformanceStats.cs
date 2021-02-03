@@ -13,7 +13,7 @@ namespace NoPerformanceStats
         public const string Name = "NoPerformanceStats";
         public const string Author = "ImTiara";
         public const string Company = null;
-        public const string Version = "1.0.1";
+        public const string Version = "1.0.2";
         public const string DownloadLink = "https://github.com/ImTiara/NoPerformanceStats/releases";
     }
 

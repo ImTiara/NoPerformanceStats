@@ -2,6 +2,7 @@
 using MelonLoader;
 using System;
 using System.Reflection;
+using VRCSDK2.Validation.Performance;
 using UnityEngine;
 
 namespace NoPerformanceStats

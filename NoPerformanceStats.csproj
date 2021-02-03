@@ -35,7 +35,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
     </Reference>
-    <Reference Include="MelonLoader.ModHandler, Version=0.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MelonLoader, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\MelonLoader\MelonLoader.ModHandler.dll</HintPath>
     </Reference>
